@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+//This is a basic gradle based Android project
 android {
     compileSdkVersion 25
     buildToolsVersion "24.0.2"
