@@ -14,8 +14,21 @@ android {
 
         // Enabling multidex support.
         //multiDexEnabled true
+
+        //Error:Jack is required to support java 8 language features. Either enable Jack or remove sourceCompatibility JavaVersion.VERSION_1_8.
+        jackOptions {
+            enabled true
+        }
     }
-   
+
+    compileOptions {
+
+        //Error:Lambda expressions not supported at this language level
+        //Add Java Version 1.8 to compile options
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     buildTypes {
         release {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -38,5 +51,10 @@ dependencies {
     //compile 'com.android.support:cardview-v7:25.1.0'
 
     //compile 'com.android.support:multidex:1.0.1'
+
+    //For Lifecycles, LiveData, and ViewModel, add:
+    compile "android.arch.lifecycle:runtime:1.0.0-alpha1"
+    compile "android.arch.lifecycle:extensions:1.0.0-alpha1"
+    annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha1"
 }
 
