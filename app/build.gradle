@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 //This is a basic gradle based Android project
 android {
     compileSdkVersion 25
-    buildToolsVersion "24.0.2"
+    buildToolsVersion '25.0.3'
 
     defaultConfig {
         applicationId "net.gamiya.androidarchitecturetest"
@@ -30,10 +30,10 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
     //compile 'com.google.android.gms:play-services-ads:10.0.1'
     //compile 'com.google.android.gms:play-services-location:10.0.1'
-    compile 'com.android.support:design:25.1.0'
+    compile 'com.android.support:design:25.3.1'
     //compile 'com.android.support:recyclerview-v7:25.1.0'
     //compile 'com.android.support:cardview-v7:25.1.0'
 
