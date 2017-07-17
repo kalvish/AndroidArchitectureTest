@@ -20,7 +20,9 @@ public class BPApplication extends Application implements HasActivityInjector {
     @Override
     public void onCreate() {
         super.onCreate();
-        DaggerYourApplicationComponent.create()
+        DaggerAppComponent.builder()
+                .application(this)
+                .build()
                 .inject(this);
     }
 
